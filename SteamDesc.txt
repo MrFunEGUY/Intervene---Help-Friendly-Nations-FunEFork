@@ -1,0 +1,83 @@
+[h1]I'll be taking a break from Stellaris (and gaming in general) until January. I need to focus on some things. Rest assured, I will be back to modding Stellaris. I need to take this break because I enjoy Stellaris so much, it can take up too much of my time.[/h1]
+
+[h1]Short Description:[/h1]
+
+- This mod grants all empires an edict that allows them to enter into wars being waged by their allies. For the purposes of this mod, an ally is anyone with a positive opinion ( > 0 ) of your empire.
+
+- If in a Federation, only the Federation leader can suggest joining an ally's war.
+
+
+[hr][/hr]
+
+[h1]Changes From Original:[/h1]
+
+- Does not require Diplomacy tradition to be adopted.
+
+- One year wait time between interventions as opposed to 5.
+
+- Interventions cost 300 influence for federations as well as independent nations.
+
+- Various English localization changes.
+
+- Allies whose wars you join will get a +150 opinion modifier from you that decays -3 / year, so it will completely decay 50 years after the you enter the war.
+
+
+[hr][/hr]
+
+[h1]Support:[/h1]
+
+- Full support for Zenith of Fallen Empires
+
+- Support for new AI personalities added by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=701432146]More AI Personalities[/url]
+
+- For the additional personalities where it made sense, I've made it so the AI should occasionally use the edict and join allied wars.
+
+
+[hr][/hr]
+
+[h1]Notes:[/h1]
+
+- Right now, this can be used to get around the 10-year truces. This may be fixed in the future.
+
+- The AI had been coded to be able to use the edict, but it seems like they will always use it if they can, so I'm taking their ability to use it away for now until I figure out how to make it more random.
+
+
+[hr][/hr]
+
+[h1]Credit:[/h1]
+
+- Obviously credit to lpslucasps and their original mod. I never got to use  it, but it was great idea that I wanted to be able to use. Check out the original mod description for more info.
+https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
+
+- Russian Localisation by [url=https://steamcommunity.com/profiles/76561198115980881]EkzoKex[/url]. Thank you!
+
+
+[hr][/hr]
+
+[h1]Some Other Mods I've Made/Updated:[/h1]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2434790082]- Civil Wars[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2158334880]- More Authorities[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2114559224]- Viable Feudalism and Imperialism - Empire Federation[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2491283817]- Useful Heirs[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2181441455]- Species Name to Nation Demonym[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2493028212]- End Truce & Close Borders[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2452302093]- We Require Borders[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
+
+===
+
+[url=https://ko-fi.com/mrfuneguy][img]https://i.imgur.com/EEyEFg6.png[/img][/url]
+
+[url=https://www.patreon.com/mrfuneguy][img]https://i.imgur.com/pdV33j3.png[/img][/url]
+
+===
+
+[url=https://discord.gg/REvVK2fjJF][img]https://i.imgur.com/4Und3QN.png[/img][/url]

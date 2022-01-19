@@ -1,0 +1,31 @@
+﻿l_russian:
+
+  edict_intervene_help_friendly_nation:0 "Помощь союзнику в §RВойне§!"
+  edict_intervene_help_friendly_nation_desc:0 "Это будет стоить нам большого политического влияния, но если мы сочтем это полезным для государственных интересов, мы сможем помочь нашим союзникам в их войнах."
+  edict_intervene_help_friendly_nation_federated:0 "Помощь союзнику в §RВойне§!"
+  edict_intervene_help_friendly_nation_federated_desc:0 "Это будет стоить нам большого политического влияния, но если мы сочтем это полезным для федеративных интересов, мы сможем помочь нашим союзникам в их войнах."
+  
+  intervene.1000.name:0 "Военная помощь"
+  intervene.1000.desc:0 "Государство, с которым у нас хорошие отношения, находится в состоянии войны. Их успех или неудача могут иметь множество последствий для нашей страны. Обеспечение их победы может быть для нас выгодно."
+  
+  intervene.1000.intervene_1:0 "Мы поможем §Y[intervene_friendly_nation_1.GetName]§! в их войне."
+  intervene.1000.intervene_2:0 "Мы поможем §Y[intervene_friendly_nation_2.GetName]§! в их войне."
+  intervene.1000.intervene_3:0 "Мы поможем §Y[intervene_friendly_nation_3.GetName]§! в их войне."
+  intervene.1000.intervene_4:0 "Мы поможем §Y[intervene_friendly_nation_4.GetName]§! в их войне."
+  intervene.1000.intervene_5:0 "Мы поможем §Y[intervene_friendly_nation_5.GetName]§! в их войне."
+  intervene.1000.intervene_6:0 "Мы поможем §Y[intervene_friendly_nation_6.GetName]§! в их войне."
+  intervene.1000.intervene_7:0 "Мы поможем §Y[intervene_friendly_nation_7.GetName]§! в их войне."
+  intervene.1000.intervene_8:0 "Мы поможем §Y[intervene_friendly_nation_8.GetName]§! в их войне."
+  intervene.1000.intervene_9:0 "Мы поможем §Y[intervene_friendly_nation_9.GetName]§! в их войне."
+  intervene.1000.intervene_10:0 "Мы поможем §Y[intervene_friendly_nation_10.GetName]§! в их войне."
+  
+  intervene.1000.desist:0 "После некоторых размышлений, мы решили не ввязываться в чужую войну."
+  
+  intervene_cooldown_text:0 "\n§RМы должны подождать год, прежде чем рассматривать новое вмешательство.§! \n\n"
+  intervene_recent_intervention_timed:0 "Недавнее вмешательство"
+  
+  intervene_opinion_military_help:0 "Оказана помощь во время войны"
+  
+  influencefail_text_intervene:0 "§RТребует§! §Y300§! £influence£ §HВлияния§!"
+  
+  intervene_friendly_nations:0 "Модификатор вмешательства"
