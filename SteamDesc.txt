@@ -1,5 +1,3 @@
-[h1]I'll be taking a break from Stellaris (and gaming in general) until January. I need to focus on some things. Rest assured, I will be back to modding Stellaris. I need to take this break because I enjoy Stellaris so much, it can take up too much of my time.[/h1]
-
 [h1]Short Description:[/h1]
 
 - This mod grants all empires an edict that allows them to enter into wars being waged by their allies. For the purposes of this mod, an ally is anyone with a positive opinion ( > 0 ) of your empire.
@@ -15,7 +13,9 @@
 
 - One year wait time between interventions as opposed to 5.
 
-- Interventions cost 300 influence for federations as well as independent nations.
+- Interventions cost 200 influence.
+
+- You can pick which war you want to join, if your ally is engaged in multiple wars.
 
 - Various English localization changes.
 

@@ -33,21 +33,7 @@ country_event = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				save_event_target_as = intervene_friendly_nation_1
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@event_target:intervene_friendly_nation_1
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				remove_country_flag = intervene_friendly_nation
 			}
 		}
@@ -57,21 +43,7 @@ country_event = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
 				save_event_target_as = intervene_friendly_nation_2
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@event_target:intervene_friendly_nation_2
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				remove_country_flag = intervene_friendly_nation
 			}
 		}
@@ -81,21 +53,7 @@ country_event = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
 				save_event_target_as = intervene_friendly_nation_3
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@event_target:intervene_friendly_nation_3
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				remove_country_flag = intervene_friendly_nation
 			}
 		}
@@ -104,21 +62,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_4
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -128,21 +72,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_5
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -152,21 +82,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_6
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -176,21 +92,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_7
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -200,21 +102,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_8
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -224,21 +112,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_9
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -248,21 +122,7 @@ country_event = {
 			random_country = {
 				limit = { has_country_flag = intervene_friendly_nation }
 				set_variable = { which = friendly_nation_war_count value = 0 }
-				every_war = {
-					limit = {
-						random_war_participant = {
-							is_war_leader = yes
-							is_same_value = prevprev
-						}
-					}
-					set_war_flag = war_friendly_nation_@prev
-					prev = {
-						change_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
-					}
-				}
+				get_flag_war_effect = yes
 				save_event_target_as = intervene_friendly_nation_10
 				remove_country_flag = intervene_friendly_nation
 			}
@@ -282,7 +142,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 1 } }
-		add_resource = { influence = -300 }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_1 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -319,6 +189,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 2 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_2 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -355,6 +236,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 3 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_3 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -391,6 +283,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 4 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_4 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -427,6 +330,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 5 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_5 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -463,6 +377,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 6 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_6 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -499,6 +424,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 7 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_7 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -535,6 +471,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 8 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_8 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -571,6 +518,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 9 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_9 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -607,6 +565,17 @@ country_event = {
 			}
 		}
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 10 } }
+		if = {
+			limit = {
+				event_target:intervene_friendly_nation_10 = {
+					check_variable = {
+						which = friendly_nation_war_count
+						value = 1
+					}
+				}
+				add_resource = { influence = -200 }
+			}
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -746,7 +715,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 1 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_1
@@ -771,7 +740,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 2 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_2
@@ -796,7 +765,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 3 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_3
@@ -821,7 +790,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 4 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_4
@@ -846,7 +815,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 5 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_5
@@ -871,7 +840,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 6 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_6
@@ -896,7 +865,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 7 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_7
@@ -921,7 +890,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 8 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_8
@@ -946,7 +915,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 9 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_9
@@ -971,7 +940,7 @@ country_event = {
 				check_variable = { which = friendly_nation_war_count value >= 10 }
 			}
 		}
-		add_resource = { influence = -300 }
+		add_resource = { influence = -200 }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_10

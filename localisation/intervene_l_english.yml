@@ -19,7 +19,7 @@
   intervene.1000.intervene_9:0 "We'll aid the §Y[intervene_friendly_nation_9.GetName]§! in their war."
   intervene.1000.intervene_10:0 "We'll aid the §Y[intervene_friendly_nation_10.GetName]§! in their war."
   
-  intervene.1000.desist:0 "After some consideration, we won't get involved in someone else's war."
+  intervene.1000.desist:0 "We won't get involved in someone else's war."
   
   intervene_cooldown_text:0 "We have to wait §Y1 year§! before considering another intervention."
   intervene_recent_intervention_timed:0 "Recent Intervention"

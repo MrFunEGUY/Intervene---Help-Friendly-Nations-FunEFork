@@ -1,0 +1,49 @@
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		num_communications > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+is_able_to_war = {
+	OR = {
+		is_subject_type = tributary
+		is_subject_type = subsidiary
+		# Vassals Expanded and Reworked
+		is_subject_type = vertributary
+		is_subject_type = versubsidiary
+		is_subject_type = verbeneficiary
+		is_subject_type = verdisciple
+		is_subject_type = verfoederatus
+		is_subject_type = versister
+		is_subject_type = verdevotee
+		is_subject_type = verkobun
+		is_subject_type = versupplier
+		is_subject_type = verworshipper
+		is_subject_type = verdebtor
+		is_subject_type = versubscriber
+		is_subject_type = verarmsdealer
+		is_subject_type = versubcontractor
+		is_subject_type = verdependency
+		# Vassals Expanded and Reworked
+		is_subject_type = exalted_subject_satellite
+		is_subject_type = exalted_subject_thrall
+		is_subject_type = exalted_subject_beneficiary
+		is_subject_type = exalted_subject_dominion
+		is_subject_type = exalted_subject_special_administrative_region
+		is_subject_type = exalted_subject_automated_assembler
+		is_subject_type = exalted_subject_symbiont
+		is_subject_type = exalted_subject_exarchate
+		is_subject_type = exalted_subject_noble_house
+		# Civil Wars
+		is_subject_type = devstate
+	}
+}
