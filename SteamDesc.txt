@@ -15,7 +15,7 @@
 
 - Interventions cost 200 influence.
 
-- You can pick which war you want to join, if your ally is engaged in multiple wars.
+- If your ally is engaged in multiple wars, you must specify which war you want to join.
 
 - Various English localization changes.
 
@@ -69,6 +69,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2493028212]- End Truce & Close Borders[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2452302093]- We Require Borders[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
