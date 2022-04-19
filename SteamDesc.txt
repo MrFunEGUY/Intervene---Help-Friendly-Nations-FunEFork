@@ -2,7 +2,7 @@
 
 - This mod grants all empires an edict that allows them to enter into wars being waged by their allies. For the purposes of this mod, an ally is anyone with a positive opinion ( > 0 ) of your empire.
 
-- If in a Federation, only the Federation leader can suggest joining an ally's war.
+- In a Federation, only the Federation leader can suggest joining an ally's war.
 
 
 [hr][/hr]
@@ -29,8 +29,6 @@
 - Full support for Zenith of Fallen Empires
 
 - Support for new AI personalities added by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=701432146]More AI Personalities[/url]
-
-- For the additional personalities where it made sense, I've made it so the AI should occasionally use the edict and join allied wars.
 
 
 [hr][/hr]
@@ -74,12 +72,11 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
-===
 
-[url=https://ko-fi.com/mrfuneguy][img]https://i.imgur.com/EEyEFg6.png[/img][/url]
+[hr][/hr]
 
-[url=https://www.patreon.com/mrfuneguy][img]https://i.imgur.com/pdV33j3.png[/img][/url]
+[h1]Support:[/h1]
 
-===
+For the best support, find me at [b]#mrfuneguys-mods[/b] on the Stellaris Modding Den Discord:
 
 [url=https://discord.gg/REvVK2fjJF][img]https://i.imgur.com/4Und3QN.png[/img][/url]
