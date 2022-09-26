@@ -26,6 +26,6 @@
   
   intervene_opinion_military_help:0 "Оказана помощь во время войны"
   
-  influencefail_text_intervene:0 "§RТребует§! §Y300§! £influence£ §HВлияния§!"
+  unity_fail_text_intervene:0 "§RТребует§! §Y1500§! £unity£ §HЕдинство§!"
   
   intervene_friendly_nations:0 "Модификатор вмешательства"

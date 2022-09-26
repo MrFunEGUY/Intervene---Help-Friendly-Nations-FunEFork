@@ -5,6 +5,6 @@ tags={
 	"Military"
 }
 name="Intervene: Help Friendly Nations - FunEFork"
-supported_version="3.2.*"
+supported_version="3.5.*"
 path="C:/Users/micha/Documents/Paradox Interactive/Stellaris/mod/Intervene - Help Friendly Nations - FunEFork"
 remote_file_id="2177145527"
