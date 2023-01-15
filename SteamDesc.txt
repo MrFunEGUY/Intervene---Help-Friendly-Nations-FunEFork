@@ -13,7 +13,7 @@
 
 - One year wait time between interventions as opposed to 5.
 
-- Interventions cost 200 influence.
+- Interventions cost 1500 Unity.
 
 - If your ally is engaged in multiple wars, you must specify which war you want to join.
 
@@ -70,6 +70,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801992671]- Occupied Resources[/url]
+
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
 
@@ -79,4 +81,4 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
 
 For the best support, find me at [b]#mrfuneguys-mods[/b] on the Stellaris Modding Den Discord:
 
-[url=https://discord.gg/REvVK2fjJF][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+[url=https://discord.gg/REvVK2fjJF][img]https://i.imgur.com/jZkBbLR.png[/img][/url]

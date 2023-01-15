@@ -164,7 +164,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_1
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_1 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -211,7 +211,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_2
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_2 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -258,7 +258,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_3
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_3 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -305,7 +305,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_4
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_4 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -352,7 +352,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_5
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_5 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -399,7 +399,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_6
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_6 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -446,7 +446,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_7
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_7 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -493,7 +493,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_8
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_8 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -540,7 +540,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_9
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_9 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -587,7 +587,7 @@ country_event = {
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_10
-				set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 				set_variable = { which = intervene_friendly_nations value = 0 }
 				event_target:intervene_friendly_nation_10 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 			}
@@ -721,7 +721,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_1
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -746,7 +746,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_2
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -771,7 +771,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_3
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -796,7 +796,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_4
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -821,7 +821,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_5
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -846,7 +846,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_6
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -871,7 +871,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_7
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -896,7 +896,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_8
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -921,7 +921,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_9
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
@@ -946,7 +946,7 @@ country_event = {
 				war = event_target:intervene_friendly_war_10
 				side = event_target:friendly_multiple_wars
 			}
-			set_timed_country_flag = { flag = intervene_recent_intervention_timed days = 360 }
+			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
 			set_variable = { which = intervene_friendly_nations value = 0 }
 			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
