@@ -10,18 +10,33 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		if = {
+			limit = { NOT = { is_variable_set = intervention_cost_multiplier } }
+			set_variable = { which = intervention_cost_multiplier value = 24 }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_country_flag = recent_intervention }
+				check_variable = { which = intervention_cost_multiplier value != 24 }
+			}
+			set_variable = { which = intervention_cost_multiplier value = 24 }
+		}
+
 		set_variable = { which = intervene_friendly_nations value = 0 }
+		export_resource_income_to_variable = { resource = influence variable = influence_per_month }
 		every_country = {
 			limit = {
+				is_war_leader = yes
+				opinion = { who = root value > 0 }
+				NOR = {
+					is_at_war_with = root
+					is_same_value = root
+				}
 				OR = {
 					is_country_type_with_subjects = yes
 					is_country_type = ascended_empire
 					is_country_type = lost_empire
 				}
-				is_war_leader = yes
-				opinion = { who = root value > 0 }
-				NOT = { is_at_war_with = root }
-				NOT = { is_same_value = root }
 			}
 			set_country_flag = intervene_friendly_nation
 			root = { change_variable = { which = intervene_friendly_nations value = 1 } }
@@ -131,42 +146,33 @@ country_event = {
 
 	option = {
 		name = intervene.1000.desist
+		hidden_effect = { clear_variable = intervene_friendly_nations }
 	}
 
 	option = {
 		name = intervene.1000.intervene_1
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 1 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_1 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_1 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_1 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_1
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_1 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_1 = {
@@ -182,38 +188,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_2
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 2 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_2 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_2 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_2 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_2
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_2 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_2 = {
@@ -229,38 +225,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_3
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 3 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_3 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_3 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_3 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_3
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_3 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_3 = {
@@ -276,38 +262,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_4
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 4 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_4 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_4 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_4 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_4
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_4 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_4 = {
@@ -323,38 +299,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_5
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 5 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_5 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_5 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_5 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_5
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_5 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_5 = {
@@ -370,38 +336,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_6
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 6 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_6 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_6 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_6 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_6
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_6 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_6 = {
@@ -417,38 +373,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_7
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 7 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_7 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_7 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_7 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_7
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_7 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_7 = {
@@ -464,38 +410,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_8
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 8 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_8 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_8 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_8 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_8
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_8 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_8 = {
@@ -511,38 +447,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_9
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 9 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_9 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_9 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_9 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_9
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_9 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_9 = {
@@ -558,38 +484,28 @@ country_event = {
 	
 	option = {
 		name = intervene.1000.intervene_10
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = { check_variable = { which = intervene_friendly_nations value >= 10 } }
 		if = {
 			limit = {
 				event_target:intervene_friendly_nation_10 = {
-					check_variable = {
-						which = friendly_nation_war_count
-						value = 1
-					}
+					check_variable = { which = friendly_nation_war_count value = 1 }
 				}
 			}
-			add_resource = { unity = -1500 }
+			intervention_cost_effect = yes
+			event_target:intervene_friendly_nation_10 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		}
 		hidden_effect = {
 			if = {
 				limit = {
 					event_target:intervene_friendly_nation_10 = {
-						check_variable = {
-							which = friendly_nation_war_count
-							value = 1
-						}
+						check_variable = { which = friendly_nation_war_count value = 1 }
 					}
 				}
 				join_war = event_target:intervene_friendly_nation_10
 				set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-				set_variable = { which = intervene_friendly_nations value = 0 }
-				event_target:intervene_friendly_nation_10 = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+				clear_variable = intervene_friendly_nations
+				intervention_multiplier_effect = yes
 			}
 			else = {
 				event_target:intervene_friendly_nation_10 = {
@@ -700,268 +616,216 @@ country_event = {
 
 	option = {
 		name = intervene.1000.desist
+		hidden_effect = { clear_variable = intervene_friendly_nations }
 	}
 
 	option = {
 		name = intervene.2000.intervene_1
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 1 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_1
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_2
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 2 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_2
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_3
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 3 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_3
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_4
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 4 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_4
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_5
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 5 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_5
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_6
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 6 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_6
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_7
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 7 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_7
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_8
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 8 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_8
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_9
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 9 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_9
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
 	}
 
 	option = {
 		name = intervene.2000.intervene_10
-		allow = {
-			custom_tooltip = {
-				fail_text = unity_fail_text_intervene
-				has_resource = { type = unity amount >= 1500 }
-			}
-		}
+		allow = { can_do_intervention = yes }
 		trigger = {
 			event_target:friendly_multiple_wars = {
 				check_variable = { which = friendly_nation_war_count value >= 10 }
 			}
 		}
-		add_resource = { unity = -1500 }
+		intervention_cost_effect = yes
+		event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
 		hidden_effect = {
 			join_war_on_side = {
 				war = event_target:intervene_friendly_war_10
 				side = event_target:friendly_multiple_wars
 			}
 			set_timed_country_flag = { flag = intervene_recent_intervention_timed years = 1 }
-			set_variable = { which = intervene_friendly_nations value = 0 }
-			event_target:friendly_multiple_wars = { add_opinion_modifier = { modifier = intervene_opinion_military_help who = root } }
+			clear_variable = intervene_friendly_nations
+			intervention_multiplier_effect = yes
 		}
-	}
-
-	after = {
-		clear_global_event_target = intervene_friendly_war_1
-		clear_global_event_target = intervene_friendly_war_2
-		clear_global_event_target = intervene_friendly_war_3
-		clear_global_event_target = intervene_friendly_war_4
-		clear_global_event_target = intervene_friendly_war_5
-		clear_global_event_target = intervene_friendly_war_6
-		clear_global_event_target = intervene_friendly_war_7
-		clear_global_event_target = intervene_friendly_war_8
-		clear_global_event_target = intervene_friendly_war_9
-		clear_global_event_target = intervene_friendly_war_10
 	}
 }

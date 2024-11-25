@@ -1,13 +1,11 @@
 intervene_help_friendly_nation = {
-
+	length = 1
 	resources = {
 		category = edicts
 		cost = {
 			influence = 0
 		}
 	}
-
-	length = 0
 
 	effect = {
 		hidden_effect = { country_event = { id = intervene.1000 } }
@@ -28,12 +26,26 @@ intervene_help_friendly_nation = {
 			fail_text = "intervene_cooldown_text"
 			NOT = { has_country_flag = intervene_recent_intervention_timed }
 		}
-		any_country = {
-			is_war_leader = yes
-			opinion = { who = root value > 0 }
-			NOR = {
-				is_at_war_with = root
-				is_same_value = root
+		custom_tooltip = {
+			fail_text = "no_valid_intervene_country"
+			NOT = {
+				any_country = {
+					is_war_leader = yes
+					OR = {
+						has_embassy = root				
+						is_improving_relations_wish = root
+						opinion = { who = root value > 0 }
+					}
+					NOR = {
+						is_at_war_with = root
+						is_same_value = root
+					}
+					OR = {
+						is_country_type_with_subjects = yes
+						is_country_type = ascended_empire
+						is_country_type = lost_empire
+					}
+				}
 			}
 		}
 	}
@@ -139,15 +151,13 @@ intervene_help_friendly_nation = {
 }
 
 intervene_help_friendly_nation_federated = {
-
+	length = 1
 	resources = {
 		category = edicts
 		cost = {
 	 		influence = 0
 		}
 	}
-
-	length = 0
 
 	effect = {
 		hidden_effect = { country_event = { id = intervene.1000 } }

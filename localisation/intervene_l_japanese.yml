@@ -1,4 +1,4 @@
-﻿l_english:
+﻿# l_english:
 # l_spanish:
 # l_german:
 # l_french:
@@ -7,7 +7,7 @@
 # l_braz_por:
 # l_simp_chinese:
 # l_korean:
-# l_japanese:
+l_japanese:
 
  edict_intervene_help_friendly_nation:0 "Aid Ally in §RWar§!"
  edict_intervene_help_friendly_nation_desc:0 "It'll cost us a lot of political capital, but if we find it to be beneficial to the national interest, we can aid our allies in their wars."
@@ -38,8 +38,6 @@
  unity_fail_text_intervene:0 "§RNot enough§! §HUnity§!"
  
  intervene_friendly_nations:0 "Intervene Modifier"
-
- intervene_no_valid_country: "§RNo Valid Country§! to Assist"
 
  intervene_no_valid_country: "§RNo Valid Country§! to Assist"
 

@@ -5,5 +5,5 @@ tags={
 	"Military"
 }
 name="Intervene: Help Friendly Nations - FunEFork"
-supported_version="3.6.*"
+supported_version="v3.*"
 remote_file_id="2177145527"

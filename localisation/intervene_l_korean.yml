@@ -1,4 +1,4 @@
-﻿l_english:
+﻿# l_english:
 # l_spanish:
 # l_german:
 # l_french:
@@ -6,7 +6,7 @@
 # l_russian:
 # l_braz_por:
 # l_simp_chinese:
-# l_korean:
+l_korean:
 # l_japanese:
 
  edict_intervene_help_friendly_nation:0 "Aid Ally in §RWar§!"
@@ -38,8 +38,6 @@
  unity_fail_text_intervene:0 "§RNot enough§! §HUnity§!"
  
  intervene_friendly_nations:0 "Intervene Modifier"
-
- intervene_no_valid_country: "§RNo Valid Country§! to Assist"
 
  intervene_no_valid_country: "§RNo Valid Country§! to Assist"
 

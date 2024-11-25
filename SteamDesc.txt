@@ -13,7 +13,7 @@
 
 - One year wait time between interventions as opposed to 5.
 
-- Interventions cost 1500 Unity.
+- Interventions start at 120 Influence, and increase in cost every intervention you have within a 15 year period. For the price to reset, wait 15 years between interventions.
 
 - If your ally is engaged in multiple wars, you must specify which war you want to join.
 
@@ -45,9 +45,11 @@
 [h1]Credit:[/h1]
 
 - Obviously credit to lpslucasps and their original mod. I never got to use  it, but it was great idea that I wanted to be able to use. Check out the original mod description for more info.
-https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115]Check out the original mod page for more info[/url].
 
 - Russian Localisation by [url=https://steamcommunity.com/profiles/76561198115980881]EkzoKex[/url]. Thank you!
+
+- Chinese Localisation by [url=https://steamcommunity.com/id/MyresMkG]MyresMkG[/url]. Thank you!
 
 
 [hr][/hr]
@@ -70,10 +72,19 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1819594115
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2732567565]- No More Exclaves[/url]
 
-[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801992671]- Occupied Resources[/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2949463581]- Ethics and Civics Alternative - FunEFork[/url]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2956036384]- Galactic Bank - FunEFork[/url]
 
 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2183551683]- Vassals Expanded and Reworked - FunEFork[/url]
 
+[hr][/hr]
+
+[url=https://www.patreon.com/mrfuneguy][img]https://i.imgur.com/pdV33j3.png[/img][/url]
+
+[url=https://paypal.me/Abreuhaha][img]https://i.imgur.com/OwoGCrW.png[/img][/url]
+
+[url=https://ko-fi.com/mrfuneguy][img]https://i.imgur.com/EEyEFg6.png[/img][/url]
 
 [hr][/hr]
 
