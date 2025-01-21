@@ -15,9 +15,7 @@ intervene_help_friendly_nation = {
 		has_federation = no
 		OR = {
 			is_subject = no
-			NOT = {
-				any_agreement = { has_term_value  = { term = subject_diplomacy value = subject_can_not_do_diplomacy } }
-			}
+			NOT = { any_agreement = { has_term_value  = { term = subject_diplomacy value = subject_can_not_do_diplomacy } } }
 		}
 	}
 
@@ -33,7 +31,7 @@ intervene_help_friendly_nation = {
 					is_war_leader = yes
 					OR = {
 						has_embassy = root				
-						is_improving_relations_wish = root
+						trust = { who = root value >= 10 }
 						opinion = { who = root value > 0 }
 					}
 					NOR = {
@@ -165,6 +163,10 @@ intervene_help_friendly_nation_federated = {
 
 	potential = {
 		has_federation = yes
+		OR = {
+			is_subject = no
+			NOT = { any_agreement = { has_term_value  = { term = subject_diplomacy value = subject_can_not_do_diplomacy } } }
+		}
 	}
 
 	allow = {
@@ -173,12 +175,26 @@ intervene_help_friendly_nation_federated = {
 			fail_text = "intervene_cooldown_text"
 			NOT = { has_country_flag = intervene_recent_intervention_timed }
 		}
-		any_country = {
-			is_war_leader = yes
-			opinion = { who = root value > 0 }
-			NOR = {
-				is_at_war_with = root
-				is_same_value = root
+		custom_tooltip = {
+			fail_text = "no_valid_intervene_country"
+			NOT = {
+				any_country = {
+					is_war_leader = yes
+					OR = {
+						has_embassy = root				
+						trust = { who = root value >= 10 }
+						opinion = { who = root value > 0 }
+					}
+					NOR = {
+						is_at_war_with = root
+						is_same_value = root
+					}
+					OR = {
+						is_country_type_with_subjects = yes
+						is_country_type = ascended_empire
+						is_country_type = lost_empire
+					}
+				}
 			}
 		}
 	}

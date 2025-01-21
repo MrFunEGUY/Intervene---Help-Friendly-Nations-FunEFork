@@ -1,9 +1,13 @@
 [h1]Short Description:[/h1]
 
-- This mod grants all empires an edict that allows them to enter into wars being waged by their allies. For the purposes of this mod, an ally is anyone with a positive opinion ( > 0 ) of your empire.
+- This mod grants all empires an edict that allows them to enter into wars being waged by their allies.
 
 - In a Federation, only the Federation leader can suggest joining an ally's war.
 
+For the purposes of this mod, an ally is an country that:
+	- Has a positive opinion ( > 0 ) of your empire
+	- Has greater than or equal to 10 trust of your empire
+	- Has an embassy in your empire
 
 [hr][/hr]
 
@@ -20,7 +24,6 @@
 - Various English localization changes.
 
 - Allies whose wars you join will get a +150 opinion modifier from you that decays -3 / year, so it will completely decay 50 years after the you enter the war.
-
 
 [hr][/hr]
 
