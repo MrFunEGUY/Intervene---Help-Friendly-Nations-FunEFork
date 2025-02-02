@@ -25,19 +25,7 @@ country_event = {
 		set_variable = { which = intervene_friendly_nations value = 0 }
 		export_resource_income_to_variable = { resource = influence variable = influence_per_month }
 		every_country = {
-			limit = {
-				is_war_leader = yes
-				opinion = { who = root value > 0 }
-				NOR = {
-					is_at_war_with = root
-					is_same_value = root
-				}
-				OR = {
-					is_country_type_with_subjects = yes
-					is_country_type = ascended_empire
-					is_country_type = lost_empire
-				}
-			}
+			limit = { is_valid_intervene_country = yes }
 			set_country_flag = intervene_friendly_nation
 			root = { change_variable = { which = intervene_friendly_nations value = 1 } }
 		}

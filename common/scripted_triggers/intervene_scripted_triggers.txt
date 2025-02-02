@@ -1,0 +1,36 @@
+
+###############################
+### FunEFork by MrFunEGUY ###
+###############################
+
+
+can_do_intervention = {
+	custom_tooltip = {
+		fail_text = influence_fail_text_intervene
+		NOT = {
+			resource_stockpile_compare = {
+				resource = influence
+				value = 5
+				mult = root.intervention_cost_multiplier
+			}
+		}
+	}
+}
+
+is_valid_intervene_country = {
+	is_war_leader = yes
+	OR = {
+		has_embassy = root				
+		trust = { who = root value >= 10 }
+		opinion = { who = root value > 0 }
+	}
+	NOR = {
+		is_at_war_with = root
+		is_same_value = root
+	}
+	OR = {
+		is_country_type_with_subjects = yes
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+	}
+}
